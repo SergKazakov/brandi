@@ -10,7 +10,8 @@
     "browser-sync":             "latest",
     "gulp-uncss":               "latest",
     "wiredep": 	                "latest",
-    "gulp.spritesmith":         "latest"
+    "gulp.spritesmith":         "latest",
+    "wiredep": 	                "latest"
   },
   "engines": {
     "node":                     "latest"
