@@ -1,0 +1,15 @@
+*,*:before, *:after{
+    @include box-sizing(border-box);
+}
+
+body{
+    font-family:  $base-font-family;
+}
+
+ul{
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}

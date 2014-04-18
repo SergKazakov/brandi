@@ -1,0 +1,17 @@
+{
+  "name": "brandi",
+  "version": "0.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp":                     "latest",
+    "gulp-autoprefixer":        "latest",
+    "gulp-ruby-sass":           "latest",
+    "gulp-bower-files":         "latest",
+    "browser-sync":             "latest",
+    "gulp-uncss":               "latest",
+    "wiredep": 	                "latest"
+  },
+  "engines": {
+    "node":                     "latest"
+  }
+}
