@@ -1,0 +1,126 @@
+  $icon-clock-x: 0px;
+  $icon-clock-y: 0px;
+  $icon-clock-offset-x: 0px;
+  $icon-clock-offset-y: 0px;
+  $icon-clock-width: 130px;
+  $icon-clock-height: 130px;
+  $icon-clock-total-width: 330px;
+  $icon-clock-total-height: 275px;
+  $icon-clock-image: 'sprite.png';
+  $icon-clock: 0px 0px 0px 0px 130px 130px 330px 275px 'sprite.png';
+  $icon-cup-x: 145px;
+  $icon-cup-y: 0px;
+  $icon-cup-offset-x: -145px;
+  $icon-cup-offset-y: 0px;
+  $icon-cup-width: 130px;
+  $icon-cup-height: 130px;
+  $icon-cup-total-width: 330px;
+  $icon-cup-total-height: 275px;
+  $icon-cup-image: 'sprite.png';
+  $icon-cup: 145px 0px -145px 0px 130px 130px 330px 275px 'sprite.png';
+  $icon-envelope-x: 290px;
+  $icon-envelope-y: 220px;
+  $icon-envelope-offset-x: -290px;
+  $icon-envelope-offset-y: -220px;
+  $icon-envelope-width: 23px;
+  $icon-envelope-height: 16px;
+  $icon-envelope-total-width: 330px;
+  $icon-envelope-total-height: 275px;
+  $icon-envelope-image: 'sprite.png';
+  $icon-envelope: 290px 220px -290px -220px 23px 16px 330px 275px 'sprite.png';
+  $icon-eye-x: 290px;
+  $icon-eye-y: 0px;
+  $icon-eye-offset-x: -290px;
+  $icon-eye-offset-y: 0px;
+  $icon-eye-width: 40px;
+  $icon-eye-height: 40px;
+  $icon-eye-total-width: 330px;
+  $icon-eye-total-height: 275px;
+  $icon-eye-image: 'sprite.png';
+  $icon-eye: 290px 0px -290px 0px 40px 40px 330px 275px 'sprite.png';
+  $icon-feather-x: 290px;
+  $icon-feather-y: 55px;
+  $icon-feather-offset-x: -290px;
+  $icon-feather-offset-y: -55px;
+  $icon-feather-width: 40px;
+  $icon-feather-height: 40px;
+  $icon-feather-total-width: 330px;
+  $icon-feather-total-height: 275px;
+  $icon-feather-image: 'sprite.png';
+  $icon-feather: 290px 55px -290px -55px 40px 40px 330px 275px 'sprite.png';
+  $icon-friends-x: 0px;
+  $icon-friends-y: 145px;
+  $icon-friends-offset-x: 0px;
+  $icon-friends-offset-y: -145px;
+  $icon-friends-width: 130px;
+  $icon-friends-height: 130px;
+  $icon-friends-total-width: 330px;
+  $icon-friends-total-height: 275px;
+  $icon-friends-image: 'sprite.png';
+  $icon-friends: 0px 145px 0px -145px 130px 130px 330px 275px 'sprite.png';
+  $icon-megaphone-x: 290px;
+  $icon-megaphone-y: 110px;
+  $icon-megaphone-offset-x: -290px;
+  $icon-megaphone-offset-y: -110px;
+  $icon-megaphone-width: 40px;
+  $icon-megaphone-height: 40px;
+  $icon-megaphone-total-width: 330px;
+  $icon-megaphone-total-height: 275px;
+  $icon-megaphone-image: 'sprite.png';
+  $icon-megaphone: 290px 110px -290px -110px 40px 40px 330px 275px 'sprite.png';
+  $icon-pencil-x: 290px;
+  $icon-pencil-y: 165px;
+  $icon-pencil-offset-x: -290px;
+  $icon-pencil-offset-y: -165px;
+  $icon-pencil-width: 40px;
+  $icon-pencil-height: 40px;
+  $icon-pencil-total-width: 330px;
+  $icon-pencil-total-height: 275px;
+  $icon-pencil-image: 'sprite.png';
+  $icon-pencil: 290px 165px -290px -165px 40px 40px 330px 275px 'sprite.png';
+  $icon-right-arrow-x: 290px;
+  $icon-right-arrow-y: 251px;
+  $icon-right-arrow-offset-x: -290px;
+  $icon-right-arrow-offset-y: -251px;
+  $icon-right-arrow-width: 18px;
+  $icon-right-arrow-height: 13px;
+  $icon-right-arrow-total-width: 330px;
+  $icon-right-arrow-total-height: 275px;
+  $icon-right-arrow-image: 'sprite.png';
+  $icon-right-arrow: 290px 251px -290px -251px 18px 13px 330px 275px 'sprite.png';
+  $icon-rocket-x: 145px;
+  $icon-rocket-y: 145px;
+  $icon-rocket-offset-x: -145px;
+  $icon-rocket-offset-y: -145px;
+  $icon-rocket-width: 130px;
+  $icon-rocket-height: 130px;
+  $icon-rocket-total-width: 330px;
+  $icon-rocket-total-height: 275px;
+  $icon-rocket-image: 'sprite.png';
+  $icon-rocket: 145px 145px -145px -145px 130px 130px 330px 275px 'sprite.png';
+
+  @mixin sprite-width($sprite) {
+    width: nth($sprite, 5);
+  }
+
+  @mixin sprite-height($sprite) {
+    height: nth($sprite, 6);
+  }
+
+  @mixin sprite-position($sprite) {
+    $sprite-offset-x: nth($sprite, 3);
+    $sprite-offset-y: nth($sprite, 4);
+    background-position: $sprite-offset-x  $sprite-offset-y;
+  }
+
+  @mixin sprite-image($sprite) {
+    $sprite-image: nth($sprite, 9);
+    background-image: url(../img/#{$sprite-image});
+  }
+
+  @mixin sprite($sprite) {
+    @include sprite-image($sprite);
+    @include sprite-position($sprite);
+    @include sprite-width($sprite);
+    @include sprite-height($sprite);
+  }

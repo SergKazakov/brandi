@@ -12,6 +12,29 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$first}', endColorStr='#{$second}');
 }
 
+@mixin rgba($color, $alpha) {
+  $rgba: rgba($color, $alpha);
+  background: $rgba;
+  .lt-ie9 &{
+      $ie-hex-str: ie-hex-str($rgba);
+      background: transparent;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+    }
+}
+
+@mixin ie-rgba($color, $alpha) {
+  .lt-ie9 &{
+      $rgba: rgba($color, $alpha);
+      $ie-hex-str: ie-hex-str($rgba);
+      background: transparent;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+    }
+}
+
+@mixin background-size($value: cover) {
+  @include prefixer(background-size, $value, mox webkit o);
+}
+
 @mixin box-sizing($type: border-box) {
   @include prefixer(box-sizing, $type, moz webkit);
 }
@@ -59,8 +82,8 @@
   @include prefixer(user-select, none, webkit ms);
 }
 
-@mixin border-radius($radius) { 
-  @include prefixer(border-radius, $radius);
+@mixin border-radius($radius: 5px) { 
+  @include prefixer(border-radius, $radius, moz webkit);
 } 
 
 @mixin prefixer($property, $value, $prefixes: webkit moz ms o) {
@@ -68,6 +91,10 @@
     #{'-' + $prefix + '-' + $property}: #{$value};
   }
   #{$property}: #{$value};
+}
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em
 }
 
 %clearfix{
@@ -78,4 +105,10 @@
     &:after{
         clear: both;
     }
+}
+
+%container{
+    max-width: $container-width;
+    margin: 0 auto;
+    text-align: center;
 }
