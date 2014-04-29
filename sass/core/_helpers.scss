@@ -47,6 +47,13 @@
   opacity: $opac;
 }
 
+@mixin ie-opacity($opac) {
+    .lt-ie9 &{
+        filter: alpha(opacity=$opac * 100);
+        -ms-filter: alpha(opacity=$opac * 100);
+    }
+}
+
 @mixin transition($value: .15s) {
   @include prefixer(transition, $value, moz webkit o);
 }

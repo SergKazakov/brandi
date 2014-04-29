@@ -11,7 +11,9 @@
     "gulp-uncss":               "latest",
     "wiredep": 	                "latest",
     "gulp.spritesmith":         "latest",
-    "wiredep": 	                "latest"
+    "wiredep": 	                "latest",
+    "gulp-csso":                "latest",
+    "gulp-rename":              "latest"
   },
   "engines": {
     "node":                     "latest"

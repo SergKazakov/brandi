@@ -6,6 +6,8 @@ var prefix = require('gulp-autoprefixer');
 var sass = require('gulp-ruby-sass');
 var spritesmith = require('gulp.spritesmith');
 var uncss = require('gulp-uncss');
+var csso = require('gulp-csso');
+var rename = require("gulp-rename");
 
 gulp.task('sprite', function () {
     var spriteData = gulp.src('img/sprite/*.png').pipe(spritesmith({
@@ -30,7 +32,7 @@ gulp.task('browser-sync', function () {
 gulp.task('sass', function () {
     gulp.src('sass/main.scss')
         .pipe(sass({
-            style: 'expanded',
+            style: 'compressed',
             sourcemap: true
         }))
         .pipe(gulp.dest('css'));
@@ -61,6 +63,12 @@ gulp.task('uncss', function() {
         .pipe(gulp.dest('css'));
 });
 
+gulp.task('csso', function() {
+    return gulp.src('css/main.css')
+        .pipe(csso())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('css'));
+});
 
 gulp.task('default', ['sass', 'browser-sync'], function () {
     gulp.watch("sass/**/*.scss", ['sass']);

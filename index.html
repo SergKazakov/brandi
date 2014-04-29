@@ -12,11 +12,9 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- bower:css -->
-    <!-- endbower -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/main.css">
-    <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/vendor/html5shiv.js"></script><![endif]-->
 </head>
 
 <body>
@@ -25,13 +23,13 @@
             <a href="#" class="logo logo--header">
                 <img src="img/icon-logo.png" alt="">
             </a>
-            <span class="logo-text">| I’am your tag line</span>
+            <span class="logo-text">I’am your tag line</span>
             <nav class="nav">
                 <a href="#" class="nav__item nav__item--active">Home</a>
-                <a href="#" class="nav__item">Features</a>
-                <a href="#" class="nav__item">Works</a>
-                <a href="#" class="nav__item">Team</a>
-                <a href="#" class="nav__item">Contact</a>
+                <a href="#features" class="nav__item">Features</a>
+                <a href="#works" class="nav__item">Works</a>
+                <a href="#team" class="nav__item">Team</a>
+                <a href="#contact" class="nav__item">Contact</a>
             </nav>
         </div>
     </header>
@@ -123,7 +121,7 @@
             </li>
         </ul>
     </section>
-    <section class="features">
+    <section class="features" id="features">
         <div class="features__inner">
             <h1 class="section-header">features</h1>
             <div class="divider">
@@ -131,35 +129,49 @@
                 <span class="divider__img icon-heart"></span>
                 <span class="divider__border"></span>
             </div>
-            <ul class="features-section" id="slider2">
-                <li class="features-section__item features-section__item--feather">
-                    <h2 class="features-section__item-header">Branding</h2>
-                    <p class="features-section__item-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-                </li>
-                <li class="features-section__item features-section__item--pencil">
-                    <h2 class="features-section__item-header">Development</h2>
-                    <p class="features-section__item-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-                </li>
-                <li class="features-section__item features-section__item--megaphone">
-                    <h2 class="features-section__item-header">Consulting</h2>
-                    <p class="features-section__item-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-                </li>
-                <li class="features-section__item features-section__item--feather">
-                    <h2 class="features-section__item-header">Branding</h2>
-                    <p class="features-section__item-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-                </li>
-                <li class="features-section__item features-section__item--pencil">
-                    <h2 class="features-section__item-header">Development</h2>
-                    <p class="features-section__item-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-                </li>
-                <li class="features-section__item features-section__item--megaphone">
-                    <h2 class="features-section__item-header">Consulting</h2>
-                    <p class="features-section__item-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-                </li>
-            </ul>
+            <div class="features-wr">
+                <ul class="features-section" id="slider2">
+                    <li class="features-section__item features-section__item--feather">
+                        <h2 class="features-section__item-header">Branding</h2>
+                        <p class="features-section__item-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                    </li>
+                    <li class="features-section__item features-section__item--pencil">
+                        <h2 class="features-section__item-header">Development</h2>
+                        <p class="features-section__item-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                    </li>
+                    <li class="features-section__item features-section__item--megaphone">
+                        <h2 class="features-section__item-header">Consulting</h2>
+                        <p class="features-section__item-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                    </li>
+                    <li class="features-section__item features-section__item--feather">
+                        <h2 class="features-section__item-header">Branding</h2>
+                        <p class="features-section__item-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                    </li>
+                    <li class="features-section__item features-section__item--pencil">
+                        <h2 class="features-section__item-header">Development</h2>
+                        <p class="features-section__item-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                    </li>
+                    <li class="features-section__item features-section__item--megaphone">
+                        <h2 class="features-section__item-header">Consulting</h2>
+                        <p class="features-section__item-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                    </li>
+                    <li class="features-section__item features-section__item--feather">
+                        <h2 class="features-section__item-header">Branding</h2>
+                        <p class="features-section__item-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                    </li>
+                    <li class="features-section__item features-section__item--pencil">
+                        <h2 class="features-section__item-header">Development</h2>
+                        <p class="features-section__item-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                    </li>
+                    <li class="features-section__item features-section__item--megaphone">
+                        <h2 class="features-section__item-header">Consulting</h2>
+                        <p class="features-section__item-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
-    <section class="works">
+    <section class="works" id="works">
         <div class="work__inner">
             <h1 class="section-header">works</h1>
             <div class="divider">
@@ -243,7 +255,7 @@
             </a>
         </div>
     </section>
-    <section class="team">
+    <section class="team" id="team">
         <div class="team__inner">
             <h1 class="section-header">meet our team</h1>
             <div class="divider">
@@ -252,152 +264,154 @@
                 <span class="divider__border"></span>
             </div>
             <h3 class="section-subtitle">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</h3>
-            <ul class="team-gallery" id="slider3">
-                <li>
-                    <div class="team-gallery__item">
-                        <img src="img/team-member-1.jpg" alt="" class="team-gallery__img">
-                        <div class="team-gallery__content">
-                            <h1 class="team-gallery__content-title">Nemo enim ipsam voluptatem quia voluptas</h1>
-                            <p class="team-gallery__content-body">sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem</p>
-                            <div class="team-gallery__social">
-                                <a href="#" class="team-gallery__social-link icon-twitter"></a>
-                                <a href="#" class="team-gallery__social-link icon-facebook"></a>
-                                <a href="#" class="team-gallery__social-link icon-google"></a>
+            <div class="team-gallery-wr">
+                <ul class="team-gallery" id="slider3">
+                    <li>
+                        <div class="team-gallery__item">
+                            <img src="img/team-member-1.jpg" alt="" class="team-gallery__img">
+                            <div class="team-gallery__content">
+                                <h1 class="team-gallery__content-title">Nemo enim ipsam voluptatem quia voluptas</h1>
+                                <p class="team-gallery__content-body">sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem</p>
+                                <div class="team-gallery__social">
+                                    <a href="#" class="team-gallery__social-link icon-twitter"></a>
+                                    <a href="#" class="team-gallery__social-link icon-facebook"></a>
+                                    <a href="#" class="team-gallery__social-link icon-google"></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="team-gallery__caption">
-                        <h1 class="team-gallery__caption-title">John Filmr Doe</h1>
-                        <h2 class="team-gallery__caption-subtitle">Managing Director</h2>
-                    </div>
-                </li>
-                <li>
-                    <div class="team-gallery__item">
-                        <img src="img/team-member-2.jpg" alt="" class="team-gallery__img">
-                        <div class="team-gallery__content">
-                            <h1 class="team-gallery__content-title">Nemo enim ipsam voluptatem quia voluptas</h1>
-                            <p class="team-gallery__content-body">sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem</p>
-                            <div class="team-gallery__social">
-                                <a href="#" class="team-gallery__social-link icon-twitter"></a>
-                                <a href="#" class="team-gallery__social-link icon-facebook"></a>
-                                <a href="#" class="team-gallery__social-link icon-google"></a>
+                        <div class="team-gallery__caption">
+                            <h1 class="team-gallery__caption-title">John Filmr Doe</h1>
+                            <h2 class="team-gallery__caption-subtitle">Managing Director</h2>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="team-gallery__item">
+                            <img src="img/team-member-2.jpg" alt="" class="team-gallery__img">
+                            <div class="team-gallery__content">
+                                <h1 class="team-gallery__content-title">Nemo enim ipsam voluptatem quia voluptas</h1>
+                                <p class="team-gallery__content-body">sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem</p>
+                                <div class="team-gallery__social">
+                                    <a href="#" class="team-gallery__social-link icon-twitter"></a>
+                                    <a href="#" class="team-gallery__social-link icon-facebook"></a>
+                                    <a href="#" class="team-gallery__social-link icon-google"></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="team-gallery__caption">
-                        <h1 class="team-gallery__caption-title">John Filmr Doe</h1>
-                        <h2 class="team-gallery__caption-subtitle">Managing Director</h2>
-                    </div>
-                </li>
-                <li>
-                    <div class="team-gallery__item">
-                        <img src="img/team-member-3.jpg" alt="" class="team-gallery__img">
-                        <div class="team-gallery__content">
-                            <h1 class="team-gallery__content-title">Nemo enim ipsam voluptatem quia voluptas</h1>
-                            <p class="team-gallery__content-body">sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem</p>
-                            <div class="team-gallery__social">
-                                <a href="#" class="team-gallery__social-link icon-twitter"></a>
-                                <a href="#" class="team-gallery__social-link icon-facebook"></a>
-                                <a href="#" class="team-gallery__social-link icon-google"></a>
+                        <div class="team-gallery__caption">
+                            <h1 class="team-gallery__caption-title">John Filmr Doe</h1>
+                            <h2 class="team-gallery__caption-subtitle">Managing Director</h2>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="team-gallery__item">
+                            <img src="img/team-member-3.jpg" alt="" class="team-gallery__img">
+                            <div class="team-gallery__content">
+                                <h1 class="team-gallery__content-title">Nemo enim ipsam voluptatem quia voluptas</h1>
+                                <p class="team-gallery__content-body">sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem</p>
+                                <div class="team-gallery__social">
+                                    <a href="#" class="team-gallery__social-link icon-twitter"></a>
+                                    <a href="#" class="team-gallery__social-link icon-facebook"></a>
+                                    <a href="#" class="team-gallery__social-link icon-google"></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="team-gallery__caption">
-                        <h1 class="team-gallery__caption-title">John Filmr Doe</h1>
-                        <h2 class="team-gallery__caption-subtitle">Managing Director</h2>
-                    </div>
-                </li>
-                <li>
-                    <div class="team-gallery__item">
-                        <img src="img/team-member-4.jpg" alt="" class="team-gallery__img">
-                        <div class="team-gallery__content">
-                            <h1 class="team-gallery__content-title">Nemo enim ipsam voluptatem quia voluptas</h1>
-                            <p class="team-gallery__content-body">sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem</p>
-                            <div class="team-gallery__social">
-                                <a href="#" class="team-gallery__social-link icon-twitter"></a>
-                                <a href="#" class="team-gallery__social-link icon-facebook"></a>
-                                <a href="#" class="team-gallery__social-link icon-google"></a>
+                        <div class="team-gallery__caption">
+                            <h1 class="team-gallery__caption-title">John Filmr Doe</h1>
+                            <h2 class="team-gallery__caption-subtitle">Managing Director</h2>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="team-gallery__item">
+                            <img src="img/team-member-4.jpg" alt="" class="team-gallery__img">
+                            <div class="team-gallery__content">
+                                <h1 class="team-gallery__content-title">Nemo enim ipsam voluptatem quia voluptas</h1>
+                                <p class="team-gallery__content-body">sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem</p>
+                                <div class="team-gallery__social">
+                                    <a href="#" class="team-gallery__social-link icon-twitter"></a>
+                                    <a href="#" class="team-gallery__social-link icon-facebook"></a>
+                                    <a href="#" class="team-gallery__social-link icon-google"></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="team-gallery__caption">
-                        <h1 class="team-gallery__caption-title">John Filmr Doe</h1>
-                        <h2 class="team-gallery__caption-subtitle">Managing Director</h2>
-                    </div>
-                </li>
-                <li>
-                    <div class="team-gallery__item">
-                        <img src="img/team-member-1.jpg" alt="" class="team-gallery__img">
-                        <div class="team-gallery__content">
-                            <h1 class="team-gallery__content-title">Nemo enim ipsam voluptatem quia voluptas</h1>
-                            <p class="team-gallery__content-body">sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem</p>
-                            <div class="team-gallery__social">
-                                <a href="#" class="team-gallery__social-link icon-twitter"></a>
-                                <a href="#" class="team-gallery__social-link icon-facebook"></a>
-                                <a href="#" class="team-gallery__social-link icon-google"></a>
+                        <div class="team-gallery__caption">
+                            <h1 class="team-gallery__caption-title">John Filmr Doe</h1>
+                            <h2 class="team-gallery__caption-subtitle">Managing Director</h2>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="team-gallery__item">
+                            <img src="img/team-member-1.jpg" alt="" class="team-gallery__img">
+                            <div class="team-gallery__content">
+                                <h1 class="team-gallery__content-title">Nemo enim ipsam voluptatem quia voluptas</h1>
+                                <p class="team-gallery__content-body">sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem</p>
+                                <div class="team-gallery__social">
+                                    <a href="#" class="team-gallery__social-link icon-twitter"></a>
+                                    <a href="#" class="team-gallery__social-link icon-facebook"></a>
+                                    <a href="#" class="team-gallery__social-link icon-google"></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="team-gallery__caption">
-                        <h1 class="team-gallery__caption-title">John Filmr Doe</h1>
-                        <h2 class="team-gallery__caption-subtitle">Managing Director</h2>
-                    </div>
-                </li>
-                <li>
-                    <div class="team-gallery__item">
-                        <img src="img/team-member-2.jpg" alt="" class="team-gallery__img">
-                        <div class="team-gallery__content">
-                            <h1 class="team-gallery__content-title">Nemo enim ipsam voluptatem quia voluptas</h1>
-                            <p class="team-gallery__content-body">sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem</p>
-                            <div class="team-gallery__social">
-                                <a href="#" class="team-gallery__social-link icon-twitter"></a>
-                                <a href="#" class="team-gallery__social-link icon-facebook"></a>
-                                <a href="#" class="team-gallery__social-link icon-google"></a>
+                        <div class="team-gallery__caption">
+                            <h1 class="team-gallery__caption-title">John Filmr Doe</h1>
+                            <h2 class="team-gallery__caption-subtitle">Managing Director</h2>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="team-gallery__item">
+                            <img src="img/team-member-2.jpg" alt="" class="team-gallery__img">
+                            <div class="team-gallery__content">
+                                <h1 class="team-gallery__content-title">Nemo enim ipsam voluptatem quia voluptas</h1>
+                                <p class="team-gallery__content-body">sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem</p>
+                                <div class="team-gallery__social">
+                                    <a href="#" class="team-gallery__social-link icon-twitter"></a>
+                                    <a href="#" class="team-gallery__social-link icon-facebook"></a>
+                                    <a href="#" class="team-gallery__social-link icon-google"></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="team-gallery__caption">
-                        <h1 class="team-gallery__caption-title">John Filmr Doe</h1>
-                        <h2 class="team-gallery__caption-subtitle">Managing Director</h2>
-                    </div>
-                </li>
-                <li>
-                    <div class="team-gallery__item">
-                        <img src="img/team-member-3.jpg" alt="" class="team-gallery__img">
-                        <div class="team-gallery__content">
-                            <h1 class="team-gallery__content-title">Nemo enim ipsam voluptatem quia voluptas</h1>
-                            <p class="team-gallery__content-body">sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem</p>
-                            <div class="team-gallery__social">
-                                <a href="#" class="team-gallery__social-link icon-twitter"></a>
-                                <a href="#" class="team-gallery__social-link icon-facebook"></a>
-                                <a href="#" class="team-gallery__social-link icon-google"></a>
+                        <div class="team-gallery__caption">
+                            <h1 class="team-gallery__caption-title">John Filmr Doe</h1>
+                            <h2 class="team-gallery__caption-subtitle">Managing Director</h2>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="team-gallery__item">
+                            <img src="img/team-member-3.jpg" alt="" class="team-gallery__img">
+                            <div class="team-gallery__content">
+                                <h1 class="team-gallery__content-title">Nemo enim ipsam voluptatem quia voluptas</h1>
+                                <p class="team-gallery__content-body">sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem</p>
+                                <div class="team-gallery__social">
+                                    <a href="#" class="team-gallery__social-link icon-twitter"></a>
+                                    <a href="#" class="team-gallery__social-link icon-facebook"></a>
+                                    <a href="#" class="team-gallery__social-link icon-google"></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="team-gallery__caption">
-                        <h1 class="team-gallery__caption-title">John Filmr Doe</h1>
-                        <h2 class="team-gallery__caption-subtitle">Managing Director</h2>
-                    </div>
-                </li>
-                <li>
-                    <div class="team-gallery__item">
-                        <img src="img/team-member-4.jpg" alt="" class="team-gallery__img">
-                        <div class="team-gallery__content">
-                            <h1 class="team-gallery__content-title">Nemo enim ipsam voluptatem quia voluptas</h1>
-                            <p class="team-gallery__content-body">sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem</p>
-                            <div class="team-gallery__social">
-                                <a href="#" class="team-gallery__social-link icon-twitter"></a>
-                                <a href="#" class="team-gallery__social-link icon-facebook"></a>
-                                <a href="#" class="team-gallery__social-link icon-google"></a>
+                        <div class="team-gallery__caption">
+                            <h1 class="team-gallery__caption-title">John Filmr Doe</h1>
+                            <h2 class="team-gallery__caption-subtitle">Managing Director</h2>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="team-gallery__item">
+                            <img src="img/team-member-4.jpg" alt="" class="team-gallery__img">
+                            <div class="team-gallery__content">
+                                <h1 class="team-gallery__content-title">Nemo enim ipsam voluptatem quia voluptas</h1>
+                                <p class="team-gallery__content-body">sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem</p>
+                                <div class="team-gallery__social">
+                                    <a href="#" class="team-gallery__social-link icon-twitter"></a>
+                                    <a href="#" class="team-gallery__social-link icon-facebook"></a>
+                                    <a href="#" class="team-gallery__social-link icon-google"></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="team-gallery__caption">
-                        <h1 class="team-gallery__caption-title">John Filmr Doe</h1>
-                        <h2 class="team-gallery__caption-subtitle">Managing Director</h2>
-                    </div>
-                </li>
-            </ul>
+                        <div class="team-gallery__caption">
+                            <h1 class="team-gallery__caption-title">John Filmr Doe</h1>
+                            <h2 class="team-gallery__caption-subtitle">Managing Director</h2>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
     <section class="facts">
@@ -432,7 +446,7 @@
             </div>
         </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="contact__inner">
             <h1 class="section-header">let's discuss</h1>
             <div class="divider">
@@ -445,7 +459,10 @@
                 <div class="contact-place">
                     <h1 class="contact-place__title">Cras at ultrices erat, sed vulputate!</h1>
                     <address class="contact-place__item contact-place__item--address">
-                        2345 Setwant natrer, 1234, Washington. United States.
+                        2345 Setwant natrer, 1234,
+                    </address>
+                    <address class="contact-place__item contact-place__item--address">
+                        Washington. United States.
                     </address>
                     <p class="contact-place__item contact-place__item--phone">(401) 1234 567</p>
                     <p class="contact-place__item contact-place__item--email">hello@brandi.com</p>
@@ -528,13 +545,12 @@
             </div>
         </div>
     </footer>
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- endbower -->
+    <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/jquery.bxslider.min.js"></script>
     <script src="js/main.js"></script>
     <!--[if lt ie9]>
-    <script src="bower_components/jquery.backgroundSize/jquery.backgroundSize.js"></script>
+    <script src="js/vendor/jquery.backgroundSize.js"></script>
+    <script src="js/vendor/placeholder-min.js"></script>
     <script>
         $(function() {
             $('.facts, .map').css( "background-size", "cover" );        
