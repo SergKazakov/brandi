@@ -1,34 +1,34 @@
-*,*:before, *:after{
+*,*:before, *:after {
     @include box-sizing(border-box);
 }
 
-body{
-    font: 16px/1.2 $base-font-family;
+body {
+    font: #{$browser-context}px / 1.2 $base-font-family;
     color: $base-color;
     font-weight: $normal;
     background: #fff;
 }
 
-ul{
+ul {
     padding: 0;
     list-style-type: none;
     margin: 0;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-p{
+p {
     color: #fff;
     font-weight: $normal;
     font-size: em(13);
     line-height: 1.846;
 }
 
-input{
+input {
     border: 0;
-    &:focus{
+    &:focus {
         outline: 0;
     }
 }
