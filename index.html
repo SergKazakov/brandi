@@ -547,12 +547,11 @@
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/bxSlider/jquery.bxslider.min.js"></script>
     <script src="js/main.js"></script>
-    <!--[if lt ie9]>
-    <script src="js/vendor/jquery.backgroundSize.js"></script>
-    <script src="js/vendor/placeholder-min.js"></script>
+    <!--[if lte ie 9]><script src="js/vendor/placeholder-min.js"></script><![endif]-->
+    <!--[if lt ie 9]><script src="js/vendor/jquery.backgroundSize.js"></script>
     <script>
         $(function() {
-            $('.facts, .map').css( "background-size", "cover" );        
+            $('.facts, .map').css( "background-size", "cover" );
         });
     </script><![endif]-->
 </body>

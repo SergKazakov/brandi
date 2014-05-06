@@ -1,13 +1,13 @@
 'use strict';
-var gulp = require('gulp');
-var browserSync = require('browser-sync');
-var wiredep = require('wiredep').stream;
-var prefix = require('gulp-autoprefixer');
-var sass = require('gulp-ruby-sass');
-var spritesmith = require('gulp.spritesmith');
-var uncss = require('gulp-uncss');
-var csso = require('gulp-csso');
-var rename = require("gulp-rename");
+var gulp            = require('gulp'),
+    browserSync     = require('browser-sync'),
+    wiredep         = require('wiredep').stream,
+    prefix          = require('gulp-autoprefixer'),
+    sass            = require('gulp-ruby-sass'),
+    spritesmith     = require('gulp.spritesmith'),
+    uncss           = require('gulp-uncss'),
+    csso            = require('gulp-csso'),
+    rename          = require("gulp-rename");
 
 gulp.task('sprite', function () {
     var spriteData = gulp.src('img/sprite/*.png').pipe(spritesmith({
