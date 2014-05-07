@@ -28,6 +28,9 @@ p {
 
 input {
     border: 0;
+    font-family: $base-font-family;
+    color: #adb1b6;
+    @include placeholder(#adb1b6);
     &:focus {
         outline: 0;
     }

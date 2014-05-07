@@ -22,7 +22,7 @@ gulp.task('sprite', function () {
 });
 
 gulp.task('browser-sync', function () {
-    browserSync.init(["*html", "css/*.css"], {
+    browserSync.init(["*html", "css/*.css", "js/main.js"], {
         server: {
             baseDir: "./"
         }

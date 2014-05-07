@@ -95,6 +95,11 @@
     display: block;
     width: 90px;
     height: 27px;
+    opacity: 1;
+    @include transition(opacity $base-transition-duration);
+    &:hover{
+        @include opacity(0.5);
+    }
     &--header {
         float: left;
         margin-top: 24px;
@@ -124,7 +129,7 @@
     &__item {
         display: block;
         float: left;
-        @include transition(border 400ms);
+        @include transition(border $base-transition-duration);
         font-size: em(13);
         color: #fff;
         padding: 33px 0 23px;
@@ -175,6 +180,7 @@
         &__item {
             color: #566f69;
             font-size: em(20);
+            @include transition(color $base-transition-duration);
             & + & {
                 margin-left: 8px;
             }
@@ -254,7 +260,7 @@
         font-size: em(14);
         font-weight: $bold;
         @include border-radius;
-        @include transition(background 400ms);
+        @include transition(color $base-transition-duration, background $base-transition-duration);
         margin-right: em(-4);
         & + & {
             margin-left: 6px;
@@ -269,6 +275,7 @@
 .gallery {
     @extend %clearfix;
     margin-top: 37px;
+    @include transition(all $base-transition-duration);
     &__item {
         float: left;
         width: 25%;
@@ -288,7 +295,7 @@
         height: 100%;
         padding-top: 94px;
         @include opacity(0);
-        @include transition(opacity 400ms);
+        @include transition(opacity $base-transition-duration);
         background: rgba($gallery-item-hover, 0.9);
         text-align: center;
         color: #fff;
@@ -359,7 +366,7 @@
             top: 0;
             display: inline-block;
             @include opacity(0);
-            @include transition(opacity 400ms);
+            @include transition(opacity $base-transition-duration);
             background: rgba($gallery-item-hover, 0.9);
             padding: 10px;
             &-title, &-body {
@@ -396,7 +403,7 @@
                 position: relative;
                 color: $font-icon-color-hover;
                 font-size: em(22);
-                @include transition(background 400ms);
+                @include transition(background $base-transition-duration);
                 .lt-ie9 & {
                     // ie8
                     visibility: hidden;
@@ -418,7 +425,7 @@
                 font-weight: $semibold;
                 color: #062033;
                 margin: 0 0 7px;
-                @include transition(color 400ms);
+                @include transition(color $base-transition-duration);
             }
             &-subtitle {
                 font-weight: $normal;
@@ -526,6 +533,7 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
             float: right;
             @include sprite-image($icon-envelope);
             background-position: $icon-envelope-offset-x $icon-envelope-offset-y + 4;
+            @include transition(color $base-transition-duration);
             &:hover {
                 color: lighten(black, 60%);
             }
@@ -538,6 +546,7 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
             display: block;
             color: #cdd2d6;
             font-size: em(28);
+            @include transition(color $base-transition-duration);
             & + & {
                 margin-top: 10px;
             }
@@ -557,7 +566,6 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
         border-bottom: 1px solid #ccc;
         padding: 10px 0 21px;
         font-size: em(13);
-        color: #adb1b6;
         width: 370px;
         margin-right: em(-4);
         @include transition(border 200ms);
@@ -655,8 +663,9 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
     @include border-radius(3px);
     border: 2px solid #fff;
     position: relative;
-    @include transition(border 400ms);
+    @include transition(border $base-transition-duration);
     margin-bottom: 18px;
+    cursor: pointer;
     &:before {
         content: '';
         position: absolute;
