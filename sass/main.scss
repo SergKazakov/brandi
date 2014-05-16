@@ -183,30 +183,28 @@
     background: #f4f7f9;
     &__inner {
         @extend %container;
-        padding: 71px $container-gutter 127px;
-    }
-    &-section-wr {
-        margin-top: 54px;
-        .bx-viewport {
-            height: auto !important;
-        }
-        .bx-pager {
-            bottom: -81px;
-        }
+        padding: 71px $container-gutter 50px;
     }
     &-section {
+        margin-top: 54px;
+        &__item-wr {
+            @extend %clearfix;
+            display: none;
+        }
         &__item {
+            float: left;
+            width: percentage(370px / $container-width);
             text-align: left;
-            padding: 0 25px 0 59px;
+            padding: 0 5px 0 70px;
             position: relative;
-            & + & {
-                margin-left: 10px;
+            &+&{
+                margin-left: percentage(30px / $container-width);
             }
             &--feather:before, &--pencil:before, &--megaphone:before {
                 content: '';
                 position: absolute;
                 display: inline-block;
-                left: 3px;
+                left: 15px;
                 top: 0px;
             }
             &--feather:before {
@@ -230,6 +228,39 @@
             }
         }
     }
+}
+
+%tabs-filter__item {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    @include border-radius(50%);
+    border: 1px solid #c7ced3;
+    cursor: pointer;
+    & + & {
+        margin-left: 8px;
+    }
+}
+
+%tabs-filter__item--active {
+    background: #062033;
+    border-color: #062033;
+}
+
+.features-filter__item,
+.team-filter__item {
+    @extend %tabs-filter__item;
+    &--active {
+        @extend %tabs-filter__item--active;
+    }
+}
+
+.features-filter {
+    margin-top: 58px;
+}
+
+.team-filter {
+    margin-top: 71px;
 }
 
 .work {
@@ -267,7 +298,7 @@
     &__item {
         float: left;
         width: 25%;
-        padding-top: percentage(300/1600);
+        padding-top: percentage(300 / 1600);
         height: 0;
         position: relative;
     }
@@ -315,22 +346,26 @@
 .team {
     &__inner {
         @extend %container;
-        padding: 94px $container-gutter 205px;
+        padding: 94px $container-gutter 116px;
     }
     &-gallery {
-        &-wr {
-            margin-top: 110px;
-            .bx-viewport {
-                height: auto !important;
-            }
-            .bx-pager {
-                bottom: -93px;
+        margin-top: 110px;
+        &__container {
+            @extend %clearfix;
+            display: none;
+        }
+        &__item-wr {
+            float: left;
+            width: percentage(270px / $container-width);
+            & + & {
+                margin-left: percentage(30px / $container-width);
             }
         }
         &__item {
             display: block;
             position: relative;
             cursor: pointer;
+            height: 300px;
         }
         &__item:hover &__content {
             @include opacity(1);
@@ -485,7 +520,7 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
     }
     &-place {
         float: left;
-        width: percentage(250px/$container-width);
+        width: percentage(250px / $container-width);
         &__title {
             font-size: em(24);
             font-weight: $normal;
@@ -505,7 +540,7 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
         @extend %clearfix;
         &-wr {
             float: left;
-            width: percentage(829px/$container-width);
+            width: percentage(829px / $container-width);
             padding: 0 10px 0 50px;
         }
         &__title {
@@ -556,11 +591,11 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
         border-bottom: 1px solid #ccc;
         padding: 10px 0 21px;
         font-size: em(13);
-        width: percentage(370px/769px);
+        width: percentage(370px / 769px);
         margin-right: em(-4);
         @include transition(border 200ms);
         & + & {
-            margin-left: percentage(29px/769px);
+            margin-left: percentage(29px / 769px);
         }
         &:focus {
             border-color: darken(#cccccc, 20%);
@@ -590,9 +625,9 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
     }
     &__item {
         float: left;
-        width: percentage(270px/$container-width);
+        width: percentage(270px / $container-width);
         & + & {
-            margin-left: percentage(30px/1170px);
+            margin-left: percentage(30px / 1170px);
         }
         &-header {
             margin: 14px 0 43px;

@@ -32,7 +32,7 @@ gulp.task('browser-sync', function () {
 gulp.task('sass', function () {
     gulp.src('sass/main.scss')
         .pipe(sass({
-            style: 'compressed',
+            style: 'expended',
             sourcemap: true
         }))
         .pipe(gulp.dest('css'));
