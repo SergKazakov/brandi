@@ -5,30 +5,24 @@ $(function () {
         mode: 'vertical',
         controls: false
     });
-    
-    $('.features-section__item-wr:first-child').fadeIn();
-    $('.features-filter__item').on('click', function () {
-        $(this).addClass('features-filter__item--active')
-            .siblings()
-            .removeClass('features-filter__item--active');
 
-        $('.features-section__item-wr').eq($(this).index())
-            .fadeIn()
-            .siblings()
-            .hide();
-    });
-    
-    $('.team-gallery__container:first-child').fadeIn();
-    $('.team-filter__item').on('click', function () {
-        $(this).addClass('team-filter__item--active')
-            .siblings()
-            .removeClass('team-filter__item--active');
+    //    tabs
+    function getTabs(tabItem, tabContent) {
+        $('.' + tabContent + ':first-child').fadeIn();
+        $('.' + tabItem).on('click', function () {
+            $(this).addClass(tabItem + '--active')
+                .siblings()
+                .removeClass(tabItem + '--active');
+            $('.' + tabContent).eq($(this).index())
+                .fadeIn()
+                .siblings()
+                .hide();
+        });
+    }
 
-        $('.team-gallery__container').eq($(this).index())
-            .fadeIn()
-            .siblings()
-            .hide();
-    });
+    getTabs('features-filter__item', 'features-section__item-wr');
+    getTabs('team-filter__item', 'team-gallery__container');
+
     //    filter
     $('.filter__item').on('click', function (e) {
         e.preventDefault();
