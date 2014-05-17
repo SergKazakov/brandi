@@ -7,7 +7,8 @@ var gulp            = require('gulp'),
     spritesmith     = require('gulp.spritesmith'),
     uncss           = require('gulp-uncss'),
     csso            = require('gulp-csso'),
-    rename          = require("gulp-rename");
+    rename          = require("gulp-rename"),
+    imagemin        = require('gulp-imagemin');
 
 gulp.task('sprite', function () {
     var spriteData = gulp.src('img/sprite/*.png').pipe(spritesmith({
@@ -53,6 +54,14 @@ gulp.task('autoprefixer', function () {
             cascade: true
         }))
         .pipe(gulp.dest('css'));
+});
+
+gulp.task('imagemin', function () {
+    return gulp.src('img/*')
+        .pipe(imagemin({
+            progressive: true
+        }))
+        .pipe(gulp.dest('img'));
 });
 
 gulp.task('mincss', function () {

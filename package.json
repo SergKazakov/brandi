@@ -13,7 +13,8 @@
     "gulp.spritesmith":         "latest",
     "wiredep": 	                "latest",
     "gulp-csso":                "latest",
-    "gulp-rename":              "latest"
+    "gulp-rename":              "latest",
+    "gulp-imagemin":            "latest"
   },
   "engines": {
     "node":                     "latest"
