@@ -61,6 +61,9 @@
     &__border {
         border-top: 1px solid #0feb9e;
         width: 28px;
+        @include max-screen(480px) {
+            display: none;
+        }
     }
     &__text {
         font-weight: $light;
@@ -80,6 +83,7 @@
     @include max-screen(768px) {
         background: #0eb493;
     }
+
     &__inner {
         @extend %container;
         @extend %clearfix;
@@ -102,10 +106,13 @@
     &--header {
         float: left;
         margin-top: 24px;
-   
     }
     &--footer {
         margin-bottom: 40px;
+        @include max-screen(1010px) {
+            float: none;
+            display: inline-block;
+        }
     }
     &-text {
         float: left;
@@ -165,20 +172,25 @@
 }
 
 .main-slider {
+    overflow: hidden;
     &__item {
         text-align: center;
         width: 100% !important;
     }
     &__img {
         width: 100%;
-        height: 100%;
+        height: 100% !important;
     }
     &__content {
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
-        padding-top: percentage(450px / 1899px);
+        padding-top: 20%;
+        @include max-screen(768px) {
+            padding-top: 15%;
+        }
+
         &-title, &-subtitle {
             font-weight: $light;
             margin: 0;
@@ -210,7 +222,7 @@
         }
     }
     &-social {
-        margin-top: 102px;
+        margin-top: 7%;
         &__item {
             color: #566f69;
             font-size: em(20);
@@ -230,6 +242,9 @@
     &__inner {
         @extend %container;
         padding: 71px $container-gutter 50px;
+        @include max-screen(480px){
+            padding-top: 100px;
+        }
     }
     &-section {
         margin-top: 54px;
@@ -585,7 +600,7 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
         float: left;
         width: 25%;
         color: #fff;
-        @include min-screen(993px) {
+        @include min-screen(769px) {
             &:first-child {
                 padding-right: 20px;
             }
@@ -594,7 +609,7 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
             }
         }
 
-        @include max-screen(992px) {
+        @include max-screen(768px) {
             width: 50%;
             margin-top: 20px;
         }
@@ -781,6 +796,9 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
         padding: 99px $container-gutter 120px;
         text-align: left;
         color: #fff;
+        @include max-screen(1010px) {
+            text-align: center;
+        }
     }
     &__item {
         float: left;
@@ -828,6 +846,9 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
     border-left: 1px solid #177e72;
     padding-left: 12px;
     line-height: 1.7;
+    @include max-screen(1010px) {
+        display: inline-block;
+    }
 }
 
 .love {
@@ -851,6 +872,11 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
 .subscribe-form {
     margin-bottom: 18px;
     position: relative;
+    @include max-screen(1010px) {
+        width: 50%;
+        display: inline-block;
+    }
+
     &__email {
         @include border-radius(3px);
         @include transition(border $base-transition-duration);
@@ -896,14 +922,9 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
 }
 
 .slider {
-    @include max-screen(768px) {
-        display: none;
-        height: 0 !important;
-    }
-
     .bx-wrapper {
         .bx-pager {
-            right: 48px;
+            right: 3%;
             top: 50%;
             margin-top: -18px;
             padding: 0;
@@ -918,6 +939,11 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
             .bx-pager-link {
                 width: 8px;
                 height: 8px;
+                @include border-radius(50%);
+                @include max-screen(768px){
+                    width: 10px;
+                    height: 10px;
+                }
                 &.active {
                     background: #fff;
                     border-color: #fff;

@@ -1,11 +1,12 @@
 $(function () {
     'use strict';
     //    slider
-    $('#slider1').bxSlider({
+    if ($(window).width()>480) $('#slider').bxSlider({
         mode: 'vertical',
         controls: false
     });
-    
+    else $('.slider').hide();
+
     //    nav
     responsiveNav(".nav-collapse");
     $('.nav-toggle').html('<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>');
