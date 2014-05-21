@@ -5,6 +5,10 @@ $(function () {
         mode: 'vertical',
         controls: false
     });
+    
+    //    nav
+    responsiveNav(".nav-collapse");
+    $('.nav-toggle').html('<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>');
 
     //    tabs
     function getTabs(tabItem, tabContent) {

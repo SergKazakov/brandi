@@ -24,7 +24,7 @@
                 <img src="img/icon-logo.png" alt="">
             </a>
             <span class="logo-text">I’am your tag line</span>
-            <nav class="nav">
+            <nav class="nav nav-collapse">
                 <a href="#" class="nav__item nav__item--active">Home</a>
                 <a href="#features" class="nav__item">Features</a>
                 <a href="#works" class="nav__item">Works</a>
@@ -189,13 +189,18 @@
                 <span class="divider__border"></span>
             </div>
             <h3 class="section-subtitle">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</h3>
-            <div class="filter" id="filter">
-                <a href="#" class="filter__item filter__item--active" data-class="all">All</a>
-                <a href="#" class="filter__item" data-class="branding">Branding</a>
-                <a href="#" class="filter__item" data-class="web">Web</a>
-                <a href="#" class="filter__item" data-class="logo">Logo Disign</a>
-                <a href="#" class="filter__item" data-class="photo">Photography</a>
-            </div>
+            <ul class="filter" id="filter">
+                <li class="filter__item"><a href="#" class="filter__item-link filter__item-link--active" data-class="all">All</a>
+                </li>
+                <li class="filter__item"><a href="#" class="filter__item-link" data-class="branding">Branding</a>
+                </li>
+                <li class="filter__item"><a href="#" class="filter__item-link" data-class="web">Web</a>
+                </li>
+                <li class="filter__item"><a href="#" class="filter__item-link" data-class="logo">Logo Disign</a>
+                </li>
+                <li class="filter__item"><a href="#" class="filter__item-link" data-class="photo">Photography</a>
+                </li>
+            </ul>
         </div>
         <div class="gallery" id="gallery">
             <a class="gallery__item gallery__item--branding" href="#">
@@ -566,6 +571,7 @@
         </div>
     </footer>
     <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/responsiveNav/responsive-nav.min.js"></script>
     <script src="js/vendor/bxSlider/jquery.bxslider.min.js"></script>
     <script src="js/main.js"></script>
     <!--[if lte ie 9]><script src="js/vendor/placeholder-min.js"></script><![endif]-->

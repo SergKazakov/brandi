@@ -2,8 +2,10 @@
 @import "core/settings";
 @import "core/helpers";
 @import "core/base";
+@import "core/media";
 @import "core/sprite";
 @import "vendor/bxslider";
+@import "vendor/responsive-nav";
 @import "vendor/fonts";
 
 .section-header {
@@ -20,6 +22,9 @@
     font-weight: $semibold;
     margin-top: 24px;
     padding: 0 105px;
+    @include max-screen(768px) {
+        padding: 0;
+    }
 }
 
 .divider {
@@ -72,10 +77,16 @@
     right: 0;
     z-index: 100;
     @include rgba(#101636, 0.2);
+    @include max-screen(768px) {
+        background: #0eb493;
+    }
     &__inner {
         @extend %container;
         @extend %clearfix;
         padding: 0 $container-gutter;
+        @include max-screen(768px) {
+            padding-bottom: 15px;
+        }
     }
 }
 
@@ -91,6 +102,7 @@
     &--header {
         float: left;
         margin-top: 24px;
+   
     }
     &--footer {
         margin-bottom: 40px;
@@ -108,12 +120,22 @@
         .lt-ie9 & {
             color: #fff;
         }
+        @include max-screen(768px) {
+            display: none;
+        }
     }
 }
 
 .nav {
     float: right;
     @extend %clearfix;
+    @include max-screen(768px) {
+        float: none;
+        text-align: left;
+        clear: left;
+        width: 100%;
+    }
+
     &__item {
         display: block;
         float: left;
@@ -128,6 +150,16 @@
         &:hover, &--active {
             border-color: #32b0ee;
             color: darken(white, 20%);
+        }
+        @include max-screen(768px) {
+            border-top: none;
+            float: none;
+            text-transform: uppercase;
+            font-size: em(16);
+            & + & {
+                margin-left: 0;
+                border-top: 1px solid #fff;
+            }
         }
     }
 }
@@ -154,10 +186,24 @@
         &-title {
             font-size: em(62);
             color: #fff;
+            @include max-screen(992px) {
+                font-size: em(50);
+            }
+
+            @include max-screen(768px) {
+                font-size: em(40);
+            }
         }
         &-subtitle {
             font-size: em(48);
             color: #e8edeb;
+            @include max-screen(992px) {
+                font-size: em(40);
+            }
+
+            @include max-screen(768px) {
+                font-size: em(30);
+            }
         }
         &-link {
             color: #0fd992;
@@ -197,9 +243,16 @@
             text-align: left;
             padding: 0 5px 0 70px;
             position: relative;
-            &+&{
-                margin-left: percentage(30px / $container-width);
+            @include max-screen(768px) {
+                width: 100%;
             }
+
+            @include min-screen(769px) {
+                & + & {
+                    margin-left: percentage(30px / $container-width);
+                }
+            }
+
             &--feather:before, &--pencil:before, &--megaphone:before {
                 content: '';
                 position: absolute;
@@ -240,6 +293,15 @@
     & + & {
         margin-left: 8px;
     }
+    @include max-screen(768px) {
+        width: 10px;
+        height: 10px;
+    }
+
+    @include max-screen(480px) {
+        width: 15px;
+        height: 15px;
+    }
 }
 
 %tabs-filter__item--active {
@@ -271,8 +333,26 @@
 }
 
 .filter {
+    @extend %clearfix;
     margin-top: 51px;
     &__item {
+        display: inline-block;
+        @include min-screen(651px) {
+            margin-right: em(-4);
+        }
+
+        @include max-screen(650px) {
+            display: block;
+            & + & {
+                margin-top: 10px;
+            }
+        }
+
+        & + & {
+            margin-left: 6px;
+        }
+    }
+    &__item-link {
         display: inline-block;
         color: #062033;
         padding: 7px 20px;
@@ -280,10 +360,6 @@
         font-weight: $bold;
         @include border-radius;
         @include transition(color $base-transition-duration, background $base-transition-duration);
-        margin-right: em(-4);
-        & + & {
-            margin-left: 6px;
-        }
         &--active, &:hover {
             color: #fff;
             background: #0eb493;
@@ -301,6 +377,15 @@
         padding-top: percentage(300 / 1600);
         height: 0;
         position: relative;
+        @include max-screen(768px) {
+            width: 50%;
+            padding-top: 38.75%;
+        }
+
+        @include max-screen(480px) {
+            width: 100%;
+            padding-top: 68.75%;
+        }
     }
     &__img {
         position: absolute;
@@ -315,7 +400,7 @@
         top: 0;
         width: 100%;
         height: 100%;
-        padding-top: 94px;
+        padding-top: 19.85%;
         @include opacity(0);
         @include transition(opacity $base-transition-duration);
         background: rgba($gallery-item-hover, 0.9);
@@ -357,15 +442,33 @@
         &__item-wr {
             float: left;
             width: percentage(270px / $container-width);
-            & + & {
-                margin-left: percentage(30px / $container-width);
+            @include min-screen(769px) {
+                & + & {
+                    margin-left: percentage(30px / $container-width);
+                }
+            }
+
+            @include max-screen(768px) {
+                width: 48%;
+                margin-bottom: 20px;
+                &:nth-child(even) {
+                    margin-left: 4%;
+                }
+            }
+
+            @include max-screen(480px) {
+                width: 100%;
+                &:nth-child(even) {
+                    margin-left: 0;
+                }
             }
         }
         &__item {
             display: block;
             position: relative;
             cursor: pointer;
-            height: 300px;
+            height: 0;
+            padding-top: 100%;
         }
         &__item:hover &__content {
             @include opacity(1);
@@ -382,6 +485,9 @@
         &__img {
             width: 100%;
             height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
         }
         &__content {
             position: absolute;
@@ -479,11 +585,22 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
         float: left;
         width: 25%;
         color: #fff;
-        &:first-child {
-            padding-right: 20px;
+        @include min-screen(993px) {
+            &:first-child {
+                padding-right: 20px;
+            }
+            & + & + & + & {
+                padding-left: 20px;
+            }
         }
-        & + & + & + & {
-            padding-left: 20px;
+
+        @include max-screen(992px) {
+            width: 50%;
+            margin-top: 20px;
+        }
+
+        @include max-screen(480px) {
+            width: 100%;
         }
     }
     &__icon {
@@ -517,9 +634,11 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
         text-align: left;
         padding-top: 20px;
         margin-top: 41px;
+        @include max-screen(768px) {
+            text-align: center;
+        }
     }
     &-place {
-        float: left;
         width: percentage(250px / $container-width);
         &__title {
             font-size: em(24);
@@ -539,9 +658,10 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
     &-form {
         @extend %clearfix;
         &-wr {
-            float: left;
             width: percentage(829px / $container-width);
-            padding: 0 10px 0 50px;
+            @include min-screen(769px) {
+                padding: 0 10px 0 50px;
+            }
         }
         &__title {
             font-size: em(24);
@@ -562,13 +682,30 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
             &:hover {
                 color: lighten(black, 60%);
             }
+            @include max-screen(768px) {
+                float: none;
+            }
         }
     }
     &-social {
-        float: right;
-        margin: 31px 21px 0 0;
+        @include min-screen(769px) {
+            margin: 31px 0 0 3.6%;
+        }
+
+        @include max-screen(768px) {
+            text-align: center;
+        }
+
+        margin-top: 20px;
         &__link {
             display: block;
+            @include max-screen(768px) {
+                display: inline-block;
+                & + & {
+                    margin-left: 10px;
+                }
+            }
+
             color: #cdd2d6;
             font-size: em(28);
             @include transition(color $base-transition-duration);
@@ -578,6 +715,16 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
             &:hover {
                 color: lighten(#cdd2d6, 10%);
             }
+        }
+    }
+    &-place, &-form-wr, &-social {
+        @include max-screen(768px) {
+            width: 100%;
+            float: none;
+        }
+
+        @include min-screen(769px) {
+            float: left;
         }
     }
 }
@@ -592,11 +739,23 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
         padding: 10px 0 21px;
         font-size: em(13);
         width: percentage(370px / 769px);
-        margin-right: em(-4);
-        @include transition(border 200ms);
-        & + & {
-            margin-left: percentage(29px / 769px);
+        @include max-screen(768px) {
+            width: 100%;
+            display: block;
+            text-align: center;
+            & + & {
+                margin-top: 28px;
+            }
         }
+
+        @include min-screen(769px) {
+            margin-right: em(-4);
+            & + & {
+                margin-left: percentage(29px / 769px);
+            }
+        }
+
+        @include transition(border 200ms);
         &:focus {
             border-color: darken(#cccccc, 20%);
         }
@@ -626,9 +785,16 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
     &__item {
         float: left;
         width: percentage(270px / $container-width);
-        & + & {
-            margin-left: percentage(30px / 1170px);
+        @include max-screen(1010px) {
+            width: 100%;
         }
+
+        @include min-screen(1011px) {
+            & + & {
+                margin-left: percentage(30px / 1170px);
+            }
+        }
+
         &-header {
             margin: 14px 0 43px;
             font-weight: $bold;
@@ -642,7 +808,7 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
     vertical-align: top;
     margin-top: -5px;
     & + & {
-        margin-left: 41px;
+        margin-left: percentage(41px / 270px);
     }
     &__item {
         margin-bottom: 13px;
@@ -730,6 +896,11 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
 }
 
 .slider {
+    @include max-screen(768px) {
+        display: none;
+        height: 0 !important;
+    }
+
     .bx-wrapper {
         .bx-pager {
             right: 48px;
@@ -753,5 +924,29 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
                 }
             }
         }
+    }
+}
+
+//nav-toggle
+
+.nav-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid #fff;
+    @include border-radius;
+    margin-top: 20px;
+}
+
+.icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background: #fff;
+    & + & {
+        margin-top: 4px;
     }
 }
