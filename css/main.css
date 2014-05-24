@@ -686,11 +686,13 @@ input:focus {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
-  background: rgba(16, 22, 54, 0.2); }
-.lt-ie9 .header {
-  background: transparent;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33101636,endColorstr=#33101636); }
+  z-index: 100; }
+@media screen and (min-width: 769px) {
+  .header {
+    background: rgba(16, 22, 54, 0.2); }
+  .lt-ie9 .header {
+    background: transparent;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33101636,endColorstr=#33101636); } }
 @media screen and (max-width: 768px) {
   .header {
     background: #0eb493; } }

@@ -79,7 +79,9 @@
     left: 0;
     right: 0;
     z-index: 100;
-    @include rgba(#101636, 0.2);
+    @include min-screen(769px){
+        @include rgba(#101636, 0.2);
+    }
     @include max-screen(768px) {
         background: #0eb493;
     }
