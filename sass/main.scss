@@ -137,9 +137,7 @@
     float: right;
     @extend %clearfix;
     @include max-screen(768px) {
-        float: none;
         text-align: left;
-        clear: left;
         width: 100%;
     }
 
@@ -205,6 +203,10 @@
             @include max-screen(768px) {
                 font-size: em(40);
             }
+            
+            @include max-screen(480px){
+                font-size: em(22);
+            }
         }
         &-subtitle {
             font-size: em(48);
@@ -216,6 +218,10 @@
             @include max-screen(768px) {
                 font-size: em(30);
             }
+            
+            @include max-screen(480px){
+                font-size: em(18);
+            }
         }
         &-link {
             color: #0fd992;
@@ -223,6 +229,9 @@
     }
     &-social {
         margin-top: 7%;
+        @include max-screen(480px){
+            display: none;
+        }
         &__item {
             color: #566f69;
             font-size: em(20);
@@ -429,6 +438,9 @@
             font-weight: $bold;
             font-size: em(18);
             margin: 22px 0 7px;
+            @include screen(769px, 992px){
+                font-size: em(14);
+            }
         }
         &-subtitle {
             font-weight: $normal;
@@ -518,6 +530,9 @@
             &-title, &-body {
                 font-size: em(16);
                 color: #fff;
+                @include screen(769px, 1100px){
+                    display: none;
+                }
             }
             &-title {
                 font-weight: $bold;
@@ -536,6 +551,10 @@
             left: 0;
             right: 0;
             display: inline-block;
+            @include screen(769px, 1100px){
+                top: 50%;
+                
+            }
             &-link {
                 display: inline-block;
                 margin-right: em(-4);
@@ -796,15 +815,22 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
         padding: 99px $container-gutter 120px;
         text-align: left;
         color: #fff;
-        @include max-screen(1010px) {
-            text-align: center;
-        }
     }
     &__item {
         float: left;
         width: percentage(270px / $container-width);
         @include max-screen(1010px) {
+            width: 50%;
+            &:nth-child(even){
+                padding-left: 2%;
+            }
+        }
+        
+        @include max-screen(768px) {
             width: 100%;
+            &:nth-child(even){
+                padding-left: 0;
+            }
         }
 
         @include min-screen(1011px) {
@@ -872,11 +898,6 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
 .subscribe-form {
     margin-bottom: 18px;
     position: relative;
-    @include max-screen(1010px) {
-        width: 50%;
-        display: inline-block;
-    }
-
     &__email {
         @include border-radius(3px);
         @include transition(border $base-transition-duration);
@@ -922,11 +943,15 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
 }
 
 .slider {
+    @include max-screen(768px){
+        margin-top: 69px;
+    }
     .bx-wrapper {
         .bx-pager {
             right: 3%;
             top: 50%;
-            margin-top: -18px;
+            margin-top: -(77px/2);
+            height: 77px;
             padding: 0;
             width: auto;
             &-item {

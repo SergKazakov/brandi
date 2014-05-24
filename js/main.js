@@ -1,11 +1,11 @@
 $(function () {
     'use strict';
     //    slider
-    if ($(window).width()>480) $('#slider').bxSlider({
+    if ($(window).width() > -1) $('#slider').bxSlider({
         mode: 'vertical',
         controls: false
     });
-    else $('.slider').hide();
+    //else $('.slider').hide();
 
     //    nav
     responsiveNav(".nav-collapse");
@@ -29,13 +29,12 @@ $(function () {
     getTabs('team-filter__item', 'team-gallery__container');
 
     //    filter
-    $('.filter__item').on('click', function (e) {
+    $('.filter__item-link').on('click', function (e) {
         e.preventDefault();
-        var activeClass = 'filter__item--active';
+        var activeClass = 'filter__item-link--active';
         if (!$(this).hasClass(activeClass)) {
-            $(this).addClass(activeClass)
-                .siblings()
-                .removeClass(activeClass);
+            $('.filter__item-link').removeClass(activeClass);
+            $(this).addClass(activeClass);
             var dataClass = $(this).data('class');
             var galleryItems = $('.gallery__item');
             if (dataClass != 'all') {
