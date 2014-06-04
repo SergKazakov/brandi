@@ -6,7 +6,7 @@ body {
     font: #{$browser-context}px / 1.2 $base-font-family;
     color: $base-color;
     font-weight: $normal;
-    background: #fff;
+    background: $body-color;
 }
 
 ul {
@@ -20,17 +20,17 @@ a {
 }
 
 p {
-    color: #fff;
+    color: $p-color;
     font-weight: $normal;
     font-size: em(13);
-    line-height: 1.846;
+    line-height: $p-line-height;
 }
 
 input {
     border: 0;
     font-family: $base-font-family;
-    color: #adb1b6;
-    @include placeholder(#adb1b6);
+    color: $input-color;
+    @include placeholder($placeholder-color);
     &:focus {
         outline: 0;
     }

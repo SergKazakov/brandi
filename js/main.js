@@ -1,4 +1,4 @@
-$(function () {
+$(function() {
     'use strict';
     //    slider
     if ($(window).width() > -1) $('#slider').bxSlider({
@@ -14,7 +14,7 @@ $(function () {
     //    tabs
     function getTabs(tabItem, tabContent) {
         $('.' + tabContent + ':first-child').fadeIn();
-        $('.' + tabItem).on('click', function () {
+        $('.' + tabItem).on('click', function() {
             $(this).addClass(tabItem + '--active')
                 .siblings()
                 .removeClass(tabItem + '--active');
@@ -29,7 +29,7 @@ $(function () {
     getTabs('team-filter__item', 'team-gallery__container');
 
     //    filter
-    $('.filter__item-link').on('click', function (e) {
+    $('.filter__item-link').on('click', function(e) {
         e.preventDefault();
         var activeClass = 'filter__item-link--active';
         if (!$(this).hasClass(activeClass)) {
@@ -44,7 +44,7 @@ $(function () {
         }
     });
     //    nav
-    $('.nav__item').on('click', function () {
+    $('.nav__item').on('click', function() {
         var href = $(this).attr('href');
         $('html, body').animate({
             scrollTop: $(href).offset().top

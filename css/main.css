@@ -339,7 +339,7 @@ body {
   font: 16px/1.2 "Open Sans", sans-serif;
   color: #384d5c;
   font-weight: 400;
-  background: #fff; }
+  background: white; }
 
 ul {
   padding: 0;
@@ -350,7 +350,7 @@ a {
   text-decoration: none; }
 
 p {
-  color: #fff;
+  color: white;
   font-weight: 400;
   font-size: 0.8125em;
   line-height: 1.846; }
@@ -647,39 +647,44 @@ input:focus {
 
 .divider {
   margin: 17px 0; }
-.divider__border, .divider__img {
+.divider:after, .divider:before, .divider__img {
   display: inline-block;
   vertical-align: middle; }
-.divider__border {
+.divider:after, .divider:before {
+  content: '';
   width: 90px;
   border-bottom: 1px solid #e6e8ea;
   margin-bottom: 6px; }
-.divider__border--fun {
+.divider--fun:before, .divider--fun:after {
   border-color: #848e97; }
 .divider__img {
   color: #ccc;
-  margin: 0 10px;
+  margin: 0 14px 0 14px;
   font-size: 1.25em; }
 .divider__img--fun {
   color: #fff; }
 
-.line-behind {
-  text-align: center;
-  margin: 15px 0; }
-.line-behind__border, .line-behind__text {
-  display: inline-block;
-  vertical-align: middle; }
-.line-behind__border {
-  border-top: 1px solid #0feb9e;
-  width: 28px; }
-@media screen and (max-width: 480px) {
-  .line-behind__border {
-    display: none; } }
 .line-behind__text {
+  text-align: center;
+  margin: 15px 0;
   font-weight: 300;
   font-size: 1.125em;
-  color: #e6e8e9;
-  margin: 0 28px; }
+  color: #e6e8e9; }
+.line-behind__text, .line-behind__text:after, .line-behind__text:before {
+  display: inline-block; }
+.line-behind__text:after, .line-behind__text:before {
+  content: '';
+  border-top: 1px solid #0feb9e;
+  vertical-align: top;
+  margin-top: 16px;
+  width: 28px; }
+@media screen and (max-width: 480px) {
+  .line-behind__text:after, .line-behind__text:before {
+    display: none; } }
+.line-behind__text:before {
+  margin-right: 32px; }
+.line-behind__text:after {
+  margin-left: 32px; }
 
 .header {
   position: absolute;
@@ -822,7 +827,7 @@ input:focus {
 .main-slider__content-link {
   color: #0fd992; }
 .main-slider-social {
-  margin-top: 7%; }
+  margin-top: 6.2%; }
 @media screen and (max-width: 480px) {
   .main-slider-social {
     display: none; } }

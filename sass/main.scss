@@ -29,21 +29,22 @@
 
 .divider {
     margin: 17px 0;
-    &__border, &__img {
+    &:after, &:before, &__img {
         display: inline-block;
         vertical-align: middle;
     }
-    &__border {
+    &:after, &:before {
+        content: '';
         width: 90px;
         border-bottom: 1px solid #e6e8ea;
         margin-bottom: 6px;
-        &--fun {
-            border-color: #848e97;
-        }
+    }
+    &--fun:before, &--fun:after{
+        border-color: #848e97;
     }
     &__img {
         color: #ccc;
-        margin: 0 10px;
+        margin: 0 14px 0 14px;
         font-size: em(20);
         &--fun {
             color: #fff;
@@ -51,25 +52,30 @@
     }
 }
 
-.line-behind {
+.line-behind__text {
     text-align: center;
     margin: 15px 0;
-    &__border, &__text {
-        display: inline-block;
-        vertical-align: middle;
+    font-weight: $light;
+    font-size: em(18);
+    color: #e6e8e9;
+    &, &:after, &:before{
+        display: inline-block; 
     }
-    &__border {
+    &:after, &:before{
+        content: '';
         border-top: 1px solid #0feb9e;
+        vertical-align: top;
+        margin-top: 16px;
         width: 28px;
         @include max-screen(480px) {
             display: none;
-        }
+        } 
     }
-    &__text {
-        font-weight: $light;
-        font-size: em(18);
-        color: #e6e8e9;
-        margin: 0 28px;
+    &:before{
+        margin-right: 32px;
+    }
+    &:after{
+        margin-left: 32px;
     }
 }
 
@@ -230,7 +236,7 @@
         }
     }
     &-social {
-        margin-top: 7%;
+        margin-top: 6.2%;
         @include max-screen(480px){
             display: none;
         }
