@@ -1,0 +1,22 @@
+{
+  "name": "brandi",
+  "version": "0.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp":                     "latest",
+    "gulp-autoprefixer":        "latest",
+    "gulp-ruby-sass":           "latest",
+    "gulp-bower-files":         "latest",
+    "browser-sync":             "latest",
+    "gulp-uncss":               "latest",
+    "wiredep": 	                "latest",
+    "gulp.spritesmith":         "latest",
+    "wiredep": 	                "latest",
+    "gulp-csso":                "latest",
+    "gulp-rename":              "latest",
+    "gulp-imagemin":            "latest"
+  },
+  "engines": {
+    "node":                     "latest"
+  }
+}

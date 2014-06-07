@@ -1,0 +1,21 @@
+{
+  "name": "brandi",
+  "version": "0.0.0",
+  "homepage": "https://github.com/SergKazakov/brandi",
+  "authors": [
+    "SergKazakov <sergeykazakoff@yandex.ru>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.11.0",
+    "jquery.backgroundSize": "*"
+  }
+}
