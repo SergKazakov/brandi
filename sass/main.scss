@@ -4,7 +4,7 @@
 @import "core/base";
 @import "core/media";
 @import "core/sprite";
-@import "vendor/bxslider";
+@import "vendor/superslides";
 @import "vendor/responsive-nav";
 @import "vendor/fonts";
 
@@ -177,26 +177,17 @@
     }
 }
 
-.main-slider {
-    overflow: hidden;
-    &__item {
-        text-align: center;
-        width: 100% !important;
-    }
-    &__img {
-        width: 100%;
-        height: 100% !important;
-    }
+.slider {
     &__content {
         position: absolute;
-        left: 0;
-        top: 0;
+        display: table;
+        height: 100%;
         width: 100%;
-        padding-top: 20%;
-        @include max-screen(768px) {
-            padding-top: 15%;
+        &-inner{
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
         }
-
         &-title, &-subtitle {
             font-weight: $light;
             margin: 0;
@@ -237,7 +228,7 @@
     }
     &-social {
         margin-top: 6.2%;
-        @include max-screen(480px){
+        @include max-screen(768px){
             display: none;
         }
         &__item {
@@ -928,62 +919,38 @@ $fact-img: (clock: $icon-clock, friends: $icon-friends, rocket: $icon-rocket, cu
     }
 }
 
-/* bxslider */
-
-.bx-wrapper {
-    margin-bottom: 0;
-    .bx-viewport {
-        @include box-shadow(none);
-        border: 0;
-        left: 0;
-        background: transparent;
-    }
-    .bx-pager.bx-default-pager a {
+.slides-pagination{
+    right: 3%;
+    top: 50%;
+    margin-top: -(77px/2);
+    height: 77px;
+    padding: 0;
+    width: auto;
+    a{
+        display: block;
         background: transparent;
         border: 1px solid #d0d4d8;
-        height: 10px;
-        width: 10px;
-        &:hover {
+        width: 8px;
+        height: 8px;
+        &:hover{
             background: #062033;
             border-color: #062033;
+        }
+        &.current{
+            background: #fff;
+            border-color: #fff;
+        }
+        @include border-radius(50%);
+        @include box-shadow(none);
+        margin-top: 15px;
+        &:first-child{
+            margin-top: 0;
         }
     }
 }
 
-.slider {
-    @include max-screen(768px){
-        margin-top: 69px;
-    }
-    .bx-wrapper {
-        .bx-pager {
-            right: 3%;
-            top: 50%;
-            margin-top: -(77px/2);
-            height: 77px;
-            padding: 0;
-            width: auto;
-            &-item {
-                display: block;
-                margin-top: 15px;
-                &:first-child {
-                    margin-top: 0;
-                }
-            }
-            .bx-pager-link {
-                width: 8px;
-                height: 8px;
-                @include border-radius(50%);
-                @include max-screen(768px){
-                    width: 10px;
-                    height: 10px;
-                }
-                &.active {
-                    background: #fff;
-                    border-color: #fff;
-                }
-            }
-        }
-    }
+.touch .slides-pagination{
+    display: none;
 }
 
 //nav-toggle

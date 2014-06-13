@@ -1,11 +1,12 @@
 $(function() {
     'use strict';
     //    slider
-    if ($(window).width() > -1) $('#slider').bxSlider({
-        mode: 'vertical',
-        controls: false
+    var slider=$('#slides');
+
+    slider.superslides({
+        'animation': 'fade',
+        'play': 10000
     });
-    //else $('.slider').hide();
 
     //    nav
     responsiveNav(".nav-collapse");

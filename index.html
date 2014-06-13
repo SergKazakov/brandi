@@ -15,8 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr/modernizr.js"></script>
     <!--[if lt IE 9]>
-        <script src="js/vendor/html5shiv.js"></script>
         <script src="js/vendor/respond.min.js"></script>
     <![endif]-->
 </head>
@@ -37,73 +37,81 @@
             </nav>
         </div>
     </header>
-    <section class="slider">
-        <ul id="slider" class="main-slider">
-            <li class="main-slider__item">
-                <img class="main-slider__img" src="img/slide_1.jpg" alt="">
-                <div class="main-slider__content">
-                    <h1 class="main-slider__content-title">Meet
-                        <strong>Brandi!</strong>
-                    </h1>
-                    <h2 class="main-slider__content-subtitle">
-                        <a class="main-slider__content-link" href="#">/creative</a>&nbsp;one page template.</h2>
-                    <p class="line-behind__text">We are a team of professionals</p>
-                    <div class="main-slider-social">
-                        <a href="javascript:void(0)" class="main-slider-social__item icon-twitter"></a>
-                        <a href="javascript:void(0)" class="main-slider-social__item icon-facebook"></a>
-                        <a href="javascript:void(0)" class="main-slider-social__item icon-google"></a>
-                        <a href="javascript:void(0)" class="main-slider-social__item icon-dribble"></a>
+    <section id="slides">
+        <ul id="slider" class="slider slides-container">
+            <li>
+                <img class="slider__img" src="img/slide_1.jpg" alt="">
+                <div class="slider__content">
+                    <div class="slider__content-inner">
+                        <h1 class="slider__content-title">Meet
+                            <strong>Brandi!</strong>
+                        </h1>
+                        <h2 class="slider__content-subtitle">
+                            <a class="slider__content-link" href="#">/creative</a>&nbsp;one page template.</h2>
+                        <p class="line-behind__text">We are a team of professionals</p>
+                        <div class="slider-social">
+                            <a href="javascript:void(0)" class="slider-social__item icon-twitter"></a>
+                            <a href="javascript:void(0)" class="slider-social__item icon-facebook"></a>
+                            <a href="javascript:void(0)" class="slider-social__item icon-google"></a>
+                            <a href="javascript:void(0)" class="slider-social__item icon-dribble"></a>
+                        </div>
                     </div>
                 </div>
             </li>
-            <li class="main-slider__item">
-                <img class="main-slider__img" src="img/slide_1.jpg" alt="">
-                <div class="main-slider__content">
-                    <h1 class="main-slider__content-title">Meet
-                        <strong>Brandi!</strong>
-                    </h1>
-                    <h2 class="main-slider__content-subtitle">
-                        <a class="main-slider__content-link" href="#">/creative</a>&nbsp;one page template.</h2>
-                    <p class="line-behind__text">We are a team of professionals</p>
-                    <div class="main-slider-social">
-                        <a href="javascript:void(0)" class="main-slider-social__item icon-twitter"></a>
-                        <a href="javascript:void(0)" class="main-slider-social__item icon-facebook"></a>
-                        <a href="javascript:void(0)" class="main-slider-social__item icon-google"></a>
-                        <a href="javascript:void(0)" class="main-slider-social__item icon-dribble"></a>
+            <li>
+                <img class="slider__img" src="img/slide_1.jpg" alt="">
+                <div class="slider__content">
+                    <div class="slider__content-inner">
+                        <h1 class="slider__content-title">Meet
+                            <strong>Brandi!</strong>
+                        </h1>
+                        <h2 class="slider__content-subtitle">
+                            <a class="slider__content-link" href="#">/creative</a>&nbsp;one page template.</h2>
+                        <p class="line-behind__text">We are a team of professionals</p>
+                        <div class="slider-social">
+                            <a href="javascript:void(0)" class="slider-social__item icon-twitter"></a>
+                            <a href="javascript:void(0)" class="slider-social__item icon-facebook"></a>
+                            <a href="javascript:void(0)" class="slider-social__item icon-google"></a>
+                            <a href="javascript:void(0)" class="slider-social__item icon-dribble"></a>
+                        </div>
                     </div>
                 </div>
             </li>
-            <li class="main-slider__item">
-                <img class="main-slider__img" src="img/slide_1.jpg" alt="">
-                <div class="main-slider__content">
-                    <h1 class="main-slider__content-title">Meet
-                        <strong>Brandi!</strong>
-                    </h1>
-                    <h2 class="main-slider__content-subtitle">
-                        <a class="main-slider__content-link" href="#">/creative</a>&nbsp;one page template.</h2>
-                    <p class="line-behind__text">We are a team of professionals</p>
-                    <div class="main-slider-social">
-                        <a href="javascript:void(0)" class="main-slider-social__item icon-twitter"></a>
-                        <a href="javascript:void(0)" class="main-slider-social__item icon-facebook"></a>
-                        <a href="javascript:void(0)" class="main-slider-social__item icon-google"></a>
-                        <a href="javascript:void(0)" class="main-slider-social__item icon-dribble"></a>
+            <li>
+                <img class="slider__img" src="img/slide_1.jpg" alt="">
+                <div class="slider__content">
+                    <div class="slider__content-inner">
+                        <h1 class="slider__content-title">Meet
+                            <strong>Brandi!</strong>
+                        </h1>
+                        <h2 class="slider__content-subtitle">
+                            <a class="slider__content-link" href="#">/creative</a>&nbsp;one page template.</h2>
+                        <p class="line-behind__text">We are a team of professionals</p>
+                        <div class="slider-social">
+                            <a href="javascript:void(0)" class="slider-social__item icon-twitter"></a>
+                            <a href="javascript:void(0)" class="slider-social__item icon-facebook"></a>
+                            <a href="javascript:void(0)" class="slider-social__item icon-google"></a>
+                            <a href="javascript:void(0)" class="slider-social__item icon-dribble"></a>
+                        </div>
                     </div>
                 </div>
             </li>
-            <li class="main-slider__item">
-                <img class="main-slider__img" src="img/slide_1.jpg" alt="">
-                <div class="main-slider__content">
-                    <h1 class="main-slider__content-title">Meet
-                        <strong>Brandi!</strong>
-                    </h1>
-                    <h2 class="main-slider__content-subtitle">
-                        <a class="main-slider__content-link" href="#">/creative</a>&nbsp;one page template.</h2>
-                    <p class="line-behind__text">We are a team of professionals</p>
-                    <div class="main-slider-social">
-                        <a href="javascript:void(0)" class="main-slider-social__item icon-twitter"></a>
-                        <a href="javascript:void(0)" class="main-slider-social__item icon-facebook"></a>
-                        <a href="javascript:void(0)" class="main-slider-social__item icon-google"></a>
-                        <a href="javascript:void(0)" class="main-slider-social__item icon-dribble"></a>
+            <li>
+                <img class="slider__img" src="img/slide_1.jpg" alt="">
+                <div class="slider__content">
+                    <div class="slider__content-inner">
+                        <h1 class="slider__content-title">Meet
+                            <strong>Brandi!</strong>
+                        </h1>
+                        <h2 class="slider__content-subtitle">
+                            <a class="slider__content-link" href="#">/creative</a>&nbsp;one page template.</h2>
+                        <p class="line-behind__text">We are a team of professionals</p>
+                        <div class="slider-social">
+                            <a href="javascript:void(0)" class="slider-social__item icon-twitter"></a>
+                            <a href="javascript:void(0)" class="slider-social__item icon-facebook"></a>
+                            <a href="javascript:void(0)" class="slider-social__item icon-google"></a>
+                            <a href="javascript:void(0)" class="slider-social__item icon-dribble"></a>
+                        </div>
                     </div>
                 </div>
             </li>
@@ -549,8 +557,8 @@
         </div>
     </footer>
     <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/jquery.superslides.min.js"></script>
     <script src="js/vendor/responsiveNav/responsive-nav.min.js"></script>
-    <script src="js/vendor/bxSlider/jquery.bxslider.min.js"></script>
     <script src="js/main.js"></script>
     <!--[if lte ie 9]><script src="js/vendor/placeholder-min.js"></script><![endif]-->
     <!--[if lt ie 9]><script src="js/vendor/jquery.backgroundSize.js"></script>
